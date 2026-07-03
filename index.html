@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Renova Colombia | Politicas y contacto</title>
+  <meta name="description" content="Renova Colombia - Tienda de descuento. Reunimos los mejores productos en un solo lugar." />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <style>
+    :root {
+      --color-principal: #9B5FBF;
+      --color-secundario: #6B2D8E;
+      --fondo-uno: #F3E8FF;
+      --fondo-dos: #E8D5F2;
+
+      --texto: #1f1b2d;
+      --texto-suave: rgba(31, 27, 45, 0.72);
+      --tarjeta: rgba(255, 255, 255, 0.84);
+      --borde: rgba(122, 60, 255, 0.15);
+      --sombra: 0 18px 48px rgba(20, 10, 40, 0.14);
+      --radio: 20px;
+      --ancho-maximo: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--texto);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(900px 520px at 10% 12%, rgba(255, 255, 255, 0.92), transparent 62%),
+        radial-gradient(760px 500px at 92% 10%, rgba(255, 255, 255, 0.66), transparent 64%),
+        linear-gradient(135deg, var(--fondo-uno), var(--fondo-dos));
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .contenedor {
+      width: min(var(--ancho-maximo), calc(100% - 32px));
+      margin: 0 auto;
+      padding: 20px 0 76px;
+    }
+
+    .barra {
+      position: sticky;
+      top: 14px;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.76);
+      box-shadow: var(--sombra);
+      backdrop-filter: blur(14px);
+    }
+
+    .marca {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 230px;
+      text-decoration: none;
+    }
+
+    .logo {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      padding: 6px;
+      border: 1px solid var(--borde);
+      border-radius: 14px;
+      background: #fff;
+    }
+
+    .marca strong,
+    .marca small {
+      display: block;
+    }
+
+    .marca strong {
+      line-height: 1.1;
+    }
+
+    .marca small {
+      margin-top: 2px;
+      color: var(--texto-suave);
+      font-size: 12px;
+      font-weight: 750;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .nav a,
+    .indice a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      color: rgba(31, 27, 45, 0.86);
+      font-size: 14px;
+      font-weight: 850;
+      text-decoration: none;
+    }
+
+    .nav a:hover,
+    .indice a:hover {
+      background: rgba(255, 255, 255, 0.84);
+    }
+
+    .boton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+      box-shadow: 0 14px 26px rgba(107, 45, 142, 0.30);
+      font-weight: 950;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+      gap: 16px;
+      margin-top: 18px;
+      padding: 22px;
+      border: 1px solid rgba(255, 255, 255, 0.68);
+      border-radius: var(--radio);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.48));
+      box-shadow: var(--sombra);
+    }
+
+    .etiqueta {
+      display: inline-flex;
+      width: fit-content;
+      margin: 0;
+      padding: 8px 12px;
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      font-size: 13px;
+      font-weight: 950;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 14px 0 10px;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .texto-hero {
+      max-width: 780px;
+      margin: 0;
+      color: var(--texto-suave);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .pildoras {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .pildora {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 9px 12px;
+      border: 1px solid rgba(155, 95, 191, 0.20);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
+    .tarjeta-rapida,
+    .contenido,
+    .tarjeta-indice,
+    .contacto {
+      border: 1px solid var(--borde);
+      border-radius: var(--radio);
+      background: var(--tarjeta);
+      box-shadow: var(--sombra);
+    }
+
+    .tarjeta-rapida {
+      padding: 14px;
+    }
+
+    .fila-rapida {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px dashed var(--borde);
+    }
+
+    .fila-rapida:last-child {
+      border-bottom: 0;
+    }
+
+    .icono {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 34px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(155, 95, 191, 0.22), rgba(107, 45, 142, 0.18));
+      color: #fff;
+      font-size: 12px;
+      font-weight: 950;
+      flex: 0 0 auto;
+    }
+
+    .fila-rapida strong,
+    .fila-rapida span,
+    .fila-rapida a {
+      display: block;
+      overflow-wrap: anywhere;
+    }
+
+    .fila-rapida span,
+    .fila-rapida a {
+      margin-top: 3px;
+      color: var(--texto-suave);
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: 16px;
+      align-items: start;
+      margin-top: 16px;
+    }
+
+    .contenido {
+      padding: 16px;
+    }
+
+    details {
+      margin-bottom: 12px;
+      overflow: hidden;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    summary {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      padding: 15px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 950;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .tag {
+      padding: 6px 10px;
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      color: var(--texto-suave);
+      font-size: 12px;
+    }
+
+    .titulo-acordeon {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .flecha {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.82);
+      transition: transform 0.16s ease;
+    }
+
+    details[open] .flecha {
+      transform: rotate(180deg);
+    }
+
+    .cuerpo-acordeon {
+      padding: 0 16px 16px;
+      border-top: 1px solid var(--borde);
+    }
+
+    .cuerpo-acordeon p,
+    .cuerpo-acordeon li {
+      color: rgba(31, 27, 45, 0.84);
+      line-height: 1.7;
+    }
+
+    .cuerpo-acordeon h3 {
+      margin: 16px 0 8px;
+      font-size: 16px;
+    }
+
+    .contacto {
+      margin-top: 4px;
+      padding: 16px;
+      scroll-margin-top: 96px;
+    }
+
+    .contacto h2,
+    .tarjeta-indice h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .contacto p {
+      margin: 0 0 14px;
+      color: var(--texto-suave);
+      line-height: 1.65;
+    }
+
+    .grid-contacto {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .campo {
+      min-height: 76px;
+      padding: 12px;
+      border: 1px solid var(--borde);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .campo strong,
+    .campo span,
+    .campo a {
+      display: block;
+    }
+
+    .campo strong {
+      margin-bottom: 5px;
+    }
+
+    .campo span,
+    .campo a {
+      color: var(--texto-suave);
+      overflow-wrap: anywhere;
+    }
+
+    .tarjeta-indice {
+      position: sticky;
+      top: 94px;
+      padding: 14px;
+    }
+
+    .indice {
+      display: grid;
+      gap: 6px;
+    }
+
+    .indice a {
+      justify-content: flex-start;
+      border: 1px solid var(--borde);
+      background: rgba(255, 255, 255, 0.66);
+    }
+
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 18px;
+      padding: 0 6px;
+      color: var(--texto-suave);
+      font-size: 14px;
+      font-weight: 750;
+    }
+
+    .whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 30;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 148px;
+      min-height: 56px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.34);
+      border-radius: 999px;
+      color: #fff;
+      background: linear-gradient(135deg, #22c55e, #10b981);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .whatsapp span {
+      font-weight: 950;
+    }
+
+    .whatsapp small {
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 980px) {
+      .barra {
+        align-items: flex-start;
+        border-radius: 24px;
+      }
+
+      .nav {
+        display: none;
+      }
+
+      .hero,
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .tarjeta-indice {
+        position: static;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .contenedor {
+        width: min(100% - 24px, var(--ancho-maximo));
+      }
+
+      .barra {
+        top: 8px;
+      }
+
+      .boton {
+        padding-inline: 12px;
+      }
+
+      .hero {
+        padding: 16px;
+      }
+
+      .grid-contacto {
+        grid-template-columns: 1fr;
+      }
+
+      .titulo-acordeon {
+        white-space: normal;
+      }
+
+      .whatsapp {
+        min-width: auto;
+        right: 12px;
+        bottom: 12px;
+      }
+
+      .whatsapp small {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="contenedor">
+    <header class="barra">
+      <a class="marca" href="#inicio" aria-label="Ir al inicio">
+        <img class="logo" src="logo_Renova_png.png" alt="Logo de Renova Colombia" />
+        <span>
+          <strong>Renova Colombia</strong>
+          <small>Tienda de descuento</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegacion principal">
+        <a href="#nosotros">Nosotros</a>
+        <a href="#cambios">Cambios</a>
+        <a href="#retracto">Retracto</a>
+        <a href="#reversion">Reversion</a>
+        <a href="#privacidad">Privacidad</a>
+        <a href="#envios">Envios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="boton" href="https://wa.me/573202891890?text=Hola%20Renova%20Colombia%2C%20necesito%20soporte" target="_blank" rel="noopener">
+        Soporte
+      </a>
+    </header>
+
+    <main id="inicio">
+      <section class="hero" aria-label="Informacion principal">
+        <div>
+          <p class="etiqueta">Informacion oficial de Renova Colombia</p>
+          <h1>Los mejores productos en un solo lugar &mdash; calidad, estilo y conveniencia</h1>
+          <p class="texto-hero">Hemos creado un destino de compras en linea, donde la calidad, el estilo y la conveniencia se encuentran. Nuestro objetivo es ofrecerte mucho mas que una simple transaccion: queremos brindarte una experiencia de compra estelar.</p>
+
+          <div class="pildoras" aria-label="Beneficios">
+            <span class="pildora">Envio rapido a todo Colombia</span>
+            <span class="pildora">Precios de descuento</span>
+            <span class="pildora">Atencion siempre abierta</span>
+            <span class="pildora">Garantia de satisfaccion</span>
+          </div>
+        </div>
+
+        <aside class="tarjeta-rapida" aria-label="Datos rapidos">
+          <div class="fila-rapida">
+            <span class="icono">Email</span>
+            <span>
+              <strong>Correo</strong>
+              <a href="mailto:contacto@renovacolombia.com">contacto@renovacolombia.com</a>
+            </span>
+          </div>
+          <div class="fila-rapida">
+            <span class="icono">Tel</span>
+            <span>
+              <strong>Telefono / WhatsApp</strong>
+              <a href="https://wa.me/573202891890" target="_blank" rel="noopener">320 289 1890</a>
+            </span>
+          </div>
+          <div class="fila-rapida">
+            <span class="icono">Dir</span>
+            <span>
+              <strong>Direccion</strong>
+              <span>CL 20 11 A 74</span>
+              <span>Sogamoso, Boyaca - Codigo postal: 152211</span>
+            </span>
+          </div>
+        </aside>
+      </section>
+
+      <div class="layout">
+        <section class="contenido" aria-label="Contenido informativo">
+
+          <details id="nosotros" open>
+            <summary>
+              <span class="tag">Nosotros</span>
+              <span class="titulo-acordeon">Sobre Renova Colombia</span>
+              <span class="flecha">v</span>
+            </summary>
+            <div class="cuerpo-acordeon">
+              <p>En Renova Colombia hemos creado un destino de compras en linea donde la calidad, el estilo y la conveniencia se encuentran. Reunimos los mejores productos en un solo lugar para que encuentres todo lo que necesitas con la mejor relacion precio-valor.</p>
+              <p>Operamos desde Sogamoso, Boyaca y llevamos nuestros productos a cada rincon del pais. Nuestro equipo esta comprometido con brindarte una experiencia de compra estelar: desde la seleccion del producto hasta la entrega en tu puerta.</p>
+              <h3>Principios de la tienda</h3>
+              <ul>
+                <li>Calidad garantizada en cada producto que ofrecemos.</li>
+                <li>Transparencia y honestidad con nuestros clientes en todo momento.</li>
+                <li>Precios de descuento sin sacrificar la experiencia del cliente.</li>
+                <li>Compromiso real con la satisfaccion de cada comprador.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details id="cambios">
+            <summary>
+              <span class="tag">Cambios</span>
+              <span class="titulo-acordeon">Politica de cambios y devoluciones</span>
+              <span class="flecha">v</span>
+            </summary>
+            <div class="cuerpo-acordeon">
+              <p>Si deseas hacer el cambio de alguno de los productos que adquiriste a traves de nuestra tienda online, puedes hacerlo de la siguiente manera: en un plazo de cinco (5) dias calendario desde la fecha de recepcion del paquete, escribenos al correo contacto@renovacolombia.com o por la linea de atencion al cliente WhatsApp al +57 320 289 1890 especificando la informacion requerida.</p>
+              <p>Te contestaremos indicando el procedimiento correspondiente y si la solicitud es autorizada de acuerdo con las politicas, terminos y condiciones de Renova Colombia. Los costos de transporte y los demas que conlleve el cambio seran cubiertos por el cliente. El producto que vas a cambiar no debe estar usado, modificado o alterado de su estado original; debe estar en buen estado, limpio y con sus etiquetas originales. Los cambios pueden tardar hasta 10 dias habiles.</p>
+              <h3>Datos requeridos para solicitar un cambio</h3>
+              <ul>
+                <li>Forma de cambio</li>
+                <li>Nombre completo</li>
+                <li>Cedula</li>
+                <li>Numero de pedido</li>
+                <li>Fecha del pedido</li>
+                <li>Numero de contacto</li>
+                <li>Producto</li>
+              </ul>
+              <h3>Error en la entrega del producto</h3>
+              <p>Si el producto entregado no es el correcto, tendras cinco (5) dias calendario a partir del momento de la entrega para informar acerca del error y solicitar el cambio, enviando un correo a contacto@renovacolombia.com. Recibido el correo se procedera al analisis del caso; si se confirma que fue un error de Renova Colombia, asumiremos el valor de recogida del producto y el envio del nuevo producto.</p>
+              <p><strong>Nota:</strong> Los productos en promocion o con descuento de nuestra seccion de OFERTAS no tienen cambio. Estos productos presentan alguna de las siguientes condiciones: remanufacturados o discontinuados, por lo tanto, la garantia legal no sera exigible.</p>
+            </div>
+          </details>
+
+          <details id="retracto">
+            <summary>
+              <span class="tag">Retracto</span>
+              <span class="titulo-acordeon">Derecho de retracto</span>
+              <span class="flecha">v</span>
+            </summary>
+            <div class="cuerpo-acordeon">
+              <p>De conformidad con el articulo 47 de la Ley 1480 de 2011, el cliente tendra derecho a retractarse de su compra dentro de los cinco (5) dias habiles siguientes a la fecha de entrega de su pedido. En caso de hacer uso de esta facultad, se resolvera el contrato y se reintegrara el dinero que el consumidor haya pagado. El consumidor debera devolver el producto por los mismos medios y en las mismas condiciones en que lo recibio.</p>
+              <p>Los costos de transporte y los demas que conlleve la devolucion del bien seran cubiertos por el consumidor. Renova Colombia devolvera al cliente la suma pagada en un plazo maximo de treinta (30) dias calendario desde el momento en que ejercio el derecho.</p>
+              <h3>Como ejercer el derecho de retracto</h3>
+              <ul>
+                <li>Envia un correo a contacto@renovacolombia.com con el asunto "Retracto", incluyendo los datos de compra y de contacto.</li>
+                <li>La solicitud debe presentarla el titular de la compra dentro de los cinco (5) primeros dias habiles a partir de la entrega.</li>
+                <li>El producto debe devolverse en las mismas condiciones en que se recibio: nuevo, sin danos, con todas las etiquetas y empaques originales.</li>
+                <li>Si el producto no se encuentra en su empaque original, no se aceptara la recepcion.</li>
+                <li>Si pagaste con tarjeta de credito el reembolso se realizara via PayU; con tarjeta debito, Baloto o Efecty se reembolsara por transferencia bancaria a la cuenta que nos informes.</li>
+                <li>No aplica para articulos vendidos en el exterior.</li>
+              </ul>
+              <h3>Excepciones al derecho de retracto</h3>
+              <ul>
+                <li>Contratos de prestacion de servicios cuya prestacion haya comenzado con el acuerdo del consumidor.</li>
+                <li>Bienes o servicios cuyo precio este sujeto a fluctuaciones del mercado financiero no controlables por el productor.</li>
+                <li>Bienes confeccionados conforme a especificaciones del consumidor o claramente personalizados.</li>
+                <li>Bienes que por su naturaleza no puedan ser devueltos, se deterioren o caduquen con rapidez.</li>
+                <li>Servicios de apuestas y loterias.</li>
+                <li>Bienes perecederos.</li>
+                <li>Bienes de uso personal.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details id="reversion">
+            <summary>
+              <span class="tag">Pago</span>
+              <span class="titulo-acordeon">Reversion del pago</span>
+              <span class="flecha">v</span>
+            </summary>
+            <div class="cuerpo-acordeon">
+              <p>Si tu compra realizada en Renova Colombia fue ejecutada mediante tarjeta de credito, debito o cualquier otro medio de pago electronico, y cumple con las causales del articulo 51 de la Ley 1480 de 2011, podras solicitar la reversion del pago dentro de los cinco (5) dias habiles siguientes a la fecha en que tuviste noticia de la operacion fraudulenta o no solicitada, o cuando debiste haber recibido el producto, lo recibiste defectuoso o no correspondia a lo solicitado.</p>
+              <p>Para invocar la reversion del pago debes enviar un correo a contacto@renovacolombia.com con tu nombre completo, cedula y razon de la solicitud. Este derecho aplica unicamente para compras realizadas mediante mecanismos de comercio electronico (internet, PSE, Call Center o tienda virtual) con tarjeta de credito, debito u otro instrumento de pago electronico. No aplica para Efecty, Baloto, pago referenciado en bancos ni pago contra entrega en efectivo. No aplica para compras realizadas en el exterior. Los usuarios que soliciten la reversion de mala fe seran sancionados por la Superintendencia de Industria y Comercio hasta por cincuenta (50) SMMLV.</p>
+              <h3>Causales validas para invocar la reversion</h3>
+              <ul>
+                <li>Fraude en la transaccion o cuando corresponda a una operacion no solicitada.</li>
+                <li>Cuando el producto no llega o no cumple con las caracteristicas informadas.</li>
+                <li>Defectos en el producto adquirido.</li>
+              </ul>
+              <p>Para medios de pago electronicos, el responsable de devolver el dinero corre por cuenta y orden de tu entidad bancaria. En caso de devolucion del producto por reversion de pago, el proveedor recogera el producto en las mismas condiciones y unicamente en el mismo lugar en que se recibio.</p>
+            </div>
+          </details>
+
+          <details id="privacidad">
+            <summary>
+              <span class="tag">Privacidad</span>
+              <span class="titulo-acordeon">Politica de privacidad</span>
+              <span class="flecha">v</span>
+            </summary>
+            <div class="cuerpo-acordeon">
+              <p>La presente Politica de Privacidad establece los terminos en que Renova Colombia usa y protege la informacion proporcionada por sus usuarios al momento de utilizar su sitio web. Estamos comprometidos con la seguridad de los datos de nuestros usuarios. Cuando pedimos llenar los campos de informacion personal con la cual puedas ser identificado, lo hacemos asegurando que solo se empleara de acuerdo con los terminos de este documento. Esta politica puede cambiar con el tiempo o ser actualizada, por lo que te recomendamos revisar esta pagina continuamente.</p>
+              <h3>Informacion que recogemos</h3>
+              <p>Nuestro sitio web podra recoger informacion personal como: nombre, informacion de contacto (correo electronico, numero de celular) o informacion demografica. Asi mismo, cuando sea necesario podra requerirse informacion especifica para procesar algun pedido, realizar una entrega o facturacion.</p>
+              <h3>Uso de la informacion recogida</h3>
+              <p>Empleamos la informacion con el fin de proporcionar el mejor servicio posible, mantener un registro de usuarios, gestionar pedidos y mejorar nuestros productos y servicios. Es posible que enviemos correos periodicamente con ofertas especiales, nuevos productos y otra informacion publicitaria que consideremos relevante; estos correos podran ser cancelados en cualquier momento. Renova Colombia esta altamente comprometido con mantener tu informacion segura. Usamos sistemas actualizados para asegurar que no exista acceso no autorizado.</p>
+            </div>
+          </details>
+
+          <details id="envios">
+            <summary>
+              <span class="tag">Envios</span>
+              <span class="titulo-acordeon">Politica de envios</span>
+              <span class="flecha">v</span>
+            </summary>
+            <div class="cuerpo-acordeon">
+              <p>Tiempo de envio: 48/72 horas a ciudades principales. Esto puede variar dependiendo de los dias habiles; son tiempos estimados y no constituyen una garantia de fecha exacta de entrega.</p>
+              <p>El envio sera gratis siempre y cuando se especifique en la oferta del producto.</p>
+              <p>El tiempo de procesamiento es de 24 horas habiles aproximadamente; despues de este periodo recibiras tu guia para rastrear tu pedido.</p>
+            </div>
+          </details>
+
+          <section id="contacto" class="contacto" aria-label="Contacto">
+            <h2>Contacto</h2>
+            <p>
+              Si necesitas soporte, escribe a contacto@renovacolombia.com o comunicate por WhatsApp.
+              Horario de atencion: siempre abierto.
+            </p>
+
+            <div class="grid-contacto">
+              <div class="campo">
+                <strong>Encargado</strong>
+                <span>MORA ARIAS WILDER ESNEIDER</span>
+              </div>
+              <div class="campo">
+                <strong>Empresa</strong>
+                <span>Renova Colombia</span>
+              </div>
+              <div class="campo">
+                <strong>Direccion</strong>
+                <span>CL 20 11 A 74</span>
+              </div>
+              <div class="campo">
+                <strong>Ciudad / Departamento</strong>
+                <span>Sogamoso, Boyaca - CP 152211</span>
+              </div>
+              <div class="campo">
+                <strong>Telefono</strong>
+                <a href="https://wa.me/573202891890" target="_blank" rel="noopener">320 289 1890</a>
+              </div>
+              <div class="campo">
+                <strong>Email</strong>
+                <a href="mailto:contacto@renovacolombia.com">contacto@renovacolombia.com</a>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <aside class="tarjeta-indice" aria-label="Indice">
+          <h2>Indice</h2>
+          <nav class="indice">
+            <a href="#nosotros">Nosotros</a>
+            <a href="#cambios">Cambios y devoluciones</a>
+            <a href="#retracto">Derecho de retracto</a>
+            <a href="#reversion">Reversion del pago</a>
+            <a href="#privacidad">Privacidad</a>
+            <a href="#envios">Politica de envios</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <span>&copy; <span id="anio"></span> MORA ARIAS WILDER ESNEIDER &middot; NIT: 1057582739-9 &middot; Todos los derechos reservados.</span>
+      <span>CL 20 11A 74, Sogamoso, Boyac&aacute; &middot; contacto@renovacolombia.com &middot; 320 289 1890</span>
+    </footer>
+  </div>
+
+  <a class="whatsapp" href="https://wa.me/573202891890?text=Hola%20Renova%20Colombia%2C%20necesito%20soporte" target="_blank" rel="noopener" aria-label="Escribir a Renova Colombia por WhatsApp">
+    <span>WhatsApp</span>
+    <small>Soporte rapido</small>
+  </a>
+
+  <script>
+    document.getElementById("anio").textContent = new Date().getFullYear();
+
+    function abrirDesdeHash() {
+      const id = location.hash.replace("#", "");
+      if (!id) return;
+
+      const elemento = document.getElementById(id);
+      if (!elemento) return;
+
+      if (elemento.tagName.toLowerCase() === "details") {
+        elemento.open = true;
+      }
+
+      elemento.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
+      enlace.addEventListener("click", (evento) => {
+        const id = enlace.getAttribute("href").replace("#", "");
+        const elemento = document.getElementById(id);
+        if (!elemento) return;
+
+        evento.preventDefault();
+        history.replaceState(null, "", "#" + id);
+
+        if (elemento.tagName.toLowerCase() === "details") {
+          elemento.open = true;
+        }
+
+        elemento.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+
+    window.addEventListener("hashchange", abrirDesdeHash);
+    window.addEventListener("load", abrirDesdeHash);
+  </script>
+</body>
+</html>
