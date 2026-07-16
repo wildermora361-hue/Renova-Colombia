@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Renova Colombia | Portafolio empresarial</title>
+
+  <meta name="description" content="Portafolio empresarial oficial de Renova Colombia. Información corporativa, principios, canales de contacto y políticas comerciales.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Renova Colombia">
+  <meta name="theme-color" content="#123b3a">
+
+  <link rel="canonical" href="https://www.renovacolombia.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:site_name" content="Renova Colombia">
+  <meta property="og:title" content="Renova Colombia | Portafolio empresarial">
+  <meta property="og:description" content="Información empresarial oficial, principios, contacto y políticas de Renova Colombia.">
+  <meta property="og:url" content="https://www.renovacolombia.com/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Renova Colombia",
+    "url": "https://www.renovacolombia.com/",
+    "email": "contacto@renovacolombia.com",
+    "telephone": "+573202891890",
+    "taxID": "1057582739-9",
+    "founder": {
+      "@type": "Person",
+      "name": "Wilder Esneider Mora Arias"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "CL 20 11 A 74",
+      "addressLocality": "Sogamoso",
+      "addressRegion": "Boyacá",
+      "addressCountry": "CO"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+573202891890",
+      "email": "contacto@renovacolombia.com",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #123b3a;
+      --primary-dark: #092928;
+      --accent: #14977f;
+      --accent-dark: #08735f;
+      --accent-soft: #dff3ed;
+      --gold: #e8a34c;
+      --background: #f8f7f3;
+      --surface: #ffffff;
+      --border: #dce5e2;
+      --text: #173331;
+      --muted: #627572;
+      --white: #ffffff;
+      --shadow: 0 22px 55px rgba(18, 59, 58, 0.12);
+      --radius-lg: 30px;
+      --radius-md: 18px;
+      --container: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      padding: 9px 20px;
+      background: var(--primary-dark);
+      color: #d9e9e5;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-align: center;
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(248, 247, 243, 0.96);
+      border-bottom: 1px solid rgba(18, 59, 58, 0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .navbar {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 45px;
+      height: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 50% 50% 50% 15px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 20px;
+      font-weight: 800;
+      transform: rotate(-6deg);
+    }
+
+    .brand-text {
+      display: grid;
+      line-height: 1;
+    }
+
+    .brand-text strong {
+      font-size: 19px;
+      letter-spacing: 0.14em;
+    }
+
+    .brand-text small {
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 0.3em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: #365653;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: -8px;
+      left: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a:focus-visible::after {
+      transform: scaleX(1);
+    }
+
+    .header-contact {
+      min-height: 44px;
+      padding: 0 19px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .header-contact:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .menu-button {
+      width: 44px;
+      height: 44px;
+      display: none;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--surface);
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 34px 0 90px;
+    }
+
+    .hero-grid {
+      min-height: 650px;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      overflow: hidden;
+      border: 1px solid rgba(18, 59, 58, 0.07);
+      border-radius: 38px;
+      background: #f0eadf;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-content {
+      padding: clamp(55px, 7vw, 90px);
+      align-self: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--accent-dark);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      max-width: 720px;
+      font-size: clamp(48px, 6vw, 80px);
+      line-height: 0.99;
+      letter-spacing: -0.06em;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .primary-button,
+    .secondary-button {
+      min-height: 52px;
+      padding: 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .primary-button {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 14px 30px rgba(20, 151, 127, 0.22);
+    }
+
+    .primary-button:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+    }
+
+    .secondary-button {
+      border: 1px solid rgba(18, 59, 58, 0.2);
+      background: transparent;
+      color: var(--primary);
+    }
+
+    .secondary-button:hover {
+      background: var(--surface);
+    }
+
+    .hero-highlights {
+      margin-top: 48px;
+      padding-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      border-top: 1px solid rgba(18, 59, 58, 0.13);
+    }
+
+    .hero-highlights strong {
+      display: block;
+      font-size: 12px;
+    }
+
+    .hero-highlights span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    .corporate-card {
+      position: relative;
+      min-height: 650px;
+      padding: 55px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .corporate-card::before,
+    .corporate-card::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 50%;
+    }
+
+    .corporate-card::before {
+      width: 430px;
+      height: 430px;
+      top: 45px;
+      right: -120px;
+    }
+
+    .corporate-card::after {
+      width: 290px;
+      height: 290px;
+      top: 115px;
+      right: -45px;
+    }
+
+    .corporate-label {
+      position: relative;
+      z-index: 1;
+      color: #b6d3cd;
+      font-size: 10px;
+      letter-spacing: 0.22em;
+    }
+
+    .corporate-card h2 {
+      position: relative;
+      z-index: 1;
+      max-width: 460px;
+      margin: auto 0;
+      font-size: clamp(39px, 4vw, 61px);
+      line-height: 1.05;
+      letter-spacing: -0.045em;
+    }
+
+    .corporate-card h2 span {
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 500;
+    }
+
+    .official-data {
+      position: relative;
+      z-index: 2;
+      padding: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(8px);
+    }
+
+    .official-data small {
+      color: #9db9b3;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .official-data strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 18px;
+    }
+
+    .official-data p {
+      margin-top: 4px;
+      color: #bed0cc;
+      font-size: 11px;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 60px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(39px, 5vw, 64px);
+      line-height: 1.03;
+      letter-spacing: -0.05em;
+    }
+
+    .section-heading p {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .principle {
+      min-height: 310px;
+      padding: 38px;
+      border-left: 1px solid var(--border);
+    }
+
+    .principle:first-child {
+      border-left: 0;
+    }
+
+    .principle-number {
+      color: var(--gold);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 29px;
+    }
+
+    .principle-icon {
+      width: 50px;
+      height: 50px;
+      margin-top: 45px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .principle h3 {
+      margin-top: 22px;
+      font-size: 20px;
+    }
+
+    .principle p {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .information-section {
+      padding: 110px 0;
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .information-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: clamp(50px, 10vw, 140px);
+      align-items: start;
+    }
+
+    .information-section .eyebrow {
+      color: #a5d5ca;
+    }
+
+    .information-section h2 {
+      font-size: clamp(40px, 5vw, 65px);
+      line-height: 1.04;
+      letter-spacing: -0.05em;
+    }
+
+    .information-section .intro {
+      margin-top: 22px;
+      color: #abc1bc;
+      line-height: 1.75;
+    }
+
+    .company-data-list {
+      display: grid;
+    }
+
+    .company-data-list div {
+      min-height: 88px;
+      padding: 21px 0;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 25px;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .company-data-list div:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .company-data-list dt {
+      color: #95ada8;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .company-data-list dd {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .policies {
+      padding: 110px 0;
+    }
+
+    .policy-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .policy-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .policy-item summary {
+      min-height: 78px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .policy-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .policy-item summary span {
+      width: 30px;
+      height: 30px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      transition: transform 0.2s ease;
+    }
+
+    .policy-item[open] summary span {
+      transform: rotate(45deg);
+    }
+
+    .policy-content {
+      padding: 0 24px 26px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+    .policy-content h3 {
+      margin: 22px 0 8px;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .policy-content p + p {
+      margin-top: 12px;
+    }
+
+    .policy-content ul {
+      margin: 12px 0 0 20px;
+    }
+
+    .policy-content li + li {
+      margin-top: 7px;
+    }
+
+    .footer {
+      padding: 75px 0 28px;
+      background: var(--primary-dark);
+      color: var(--white);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 1fr 1.2fr;
+      gap: 45px;
+    }
+
+    .footer .brand-text small {
+      color: #91aba5;
+    }
+
+    .footer-description {
+      margin-top: 22px;
+      color: #96ada8;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      color: #9fb3af;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 10px;
+      color: var(--white);
+      font-size: 11px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .footer-column a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      margin-top: 55px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      color: #78928c;
+      font-size: 10px;
+    }
+
+    .whatsapp-floating {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1100;
+      padding: 10px 18px 10px 10px;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      border-radius: 999px;
+      background: #18a96f;
+      color: var(--white);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.23);
+      font-size: 12px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .whatsapp-floating:hover {
+      background: #118b5b;
+      transform: translateY(-3px);
+    }
+
+    .whatsapp-icon {
+      width: 37px;
+      height: 37px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .whatsapp-icon svg {
+      width: 21px;
+      height: 21px;
+      fill: currentColor;
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(232, 163, 76, 0.75);
+      outline-offset: 4px;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-button {
+        display: grid;
+      }
+
+      .header-contact {
+        margin-left: auto;
+      }
+
+      .hero-grid,
+      .information-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .corporate-card {
+        min-height: 500px;
+      }
+
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .principle {
+        min-height: auto;
+        border-top: 1px solid var(--border);
+        border-left: 0;
+      }
+
+      .principle:first-child {
+        border-top: 0;
+      }
+
+      .policy-list {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 26px, var(--container));
+      }
+
+      .topbar {
+        font-size: 9px;
+      }
+
+      .navbar {
+        min-height: 74px;
+      }
+
+      .header-contact {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 14px;
+        padding-bottom: 70px;
+      }
+
+      .hero-grid {
+        border-radius: 25px;
+      }
+
+      .hero-content {
+        padding: 48px 25px 38px;
+      }
+
+      .hero h1 {
+        font-size: clamp(43px, 13vw, 58px);
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .primary-button,
+      .secondary-button {
+        width: 100%;
+      }
+
+      .hero-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-highlights div {
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        align-items: center;
+      }
+
+      .corporate-card {
+        min-height: 455px;
+        padding: 36px 27px;
+      }
+
+      .section,
+      .information-section,
+      .policies {
+        padding: 80px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 42px;
+      }
+
+      .principle {
+        padding: 30px 24px;
+      }
+
+      .company-data-list div {
+        grid-template-columns: 1fr;
+        gap: 7px;
+      }
+
+      .policy-item summary {
+        padding: 18px;
+        font-size: 13px;
+      }
+
+      .policy-content {
+        padding: 0 18px 22px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .whatsapp-floating {
+        right: 14px;
+        bottom: 14px;
+        left: 14px;
+        justify-content: center;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    Sitio oficial de información empresarial · Renova Colombia
+  </div>
+
+  <header class="header">
+    <nav class="navbar container" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Renova Colombia, inicio">
+        <span class="brand-mark" aria-hidden="true">R</span>
+
+        <span class="brand-text">
+          <strong>RENOVA</strong>
+          <small>COLOMBIA</small>
+        </span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#principios">Principios</a></li>
+        <li><a href="#empresa">Empresa</a></li>
+        <li><a href="#politicas">Políticas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+      <a class="header-contact" href="mailto:contacto@renovacolombia.com">
+        Correo oficial <span aria-hidden="true">↗</span>
+      </a>
+
+      <button
+        class="menu-button"
+        type="button"
+        aria-label="Mostrar menú"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        onclick="toggleMenu(this)"
+      >
+        ☰
+      </button>
+    </nav>
+
+    <nav
+      id="mobile-menu"
+      class="container"
+      aria-label="Navegación móvil"
+      hidden
+      style="padding: 0 0 22px;"
+    >
+      <div style="display:grid; gap:14px; font-size:14px; font-weight:700;">
+        <a href="#inicio" onclick="closeMenu()">Inicio</a>
+        <a href="#principios" onclick="closeMenu()">Principios</a>
+        <a href="#empresa" onclick="closeMenu()">Empresa</a>
+        <a href="#politicas" onclick="closeMenu()">Políticas</a>
+        <a href="#contacto" onclick="closeMenu()">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-grid container">
+        <div class="hero-content">
+          <p class="eyebrow">Portafolio empresarial colombiano</p>
+
+          <h1>
+            Productos seleccionados con
+            <span>calidad y confianza.</span>
+          </h1>
+
+          <p class="hero-description">
+            Renova Colombia es un portafolio empresarial enfocado en acercar
+            productos seleccionados con una excelente relación entre precio,
+            utilidad y valor, mediante canales digitales y atención directa.
+          </p>
+
+          <div class="hero-actions">
+            <a class="primary-button" href="#empresa">
+              Consultar información empresarial
+              <span aria-hidden="true">↓</span>
+            </a>
+
+            <a
+              class="secondary-button"
+              href="https://wa.me/573202891890?text=Hola%20Renova%20Colombia%2C%20deseo%20realizar%20una%20consulta%20empresarial."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Consulta corporativa
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="hero-highlights" aria-label="Características de Renova Colombia">
+            <div>
+              <strong>Información pública</strong>
+              <span>Datos empresariales visibles</span>
+            </div>
+
+            <div>
+              <strong>Atención directa</strong>
+              <span>Canales oficiales de contacto</span>
+            </div>
+
+            <div>
+              <strong>Políticas claras</strong>
+              <span>Condiciones disponibles en línea</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="corporate-card" aria-label="Información corporativa">
+          <p class="corporate-label">RENOVA COLOMBIA · INFORMACIÓN OFICIAL</p>
+
+          <h2>
+            Una relación comercial basada en
+            <span>claridad y transparencia.</span>
+          </h2>
+
+          <div class="official-data">
+            <small>Identificación empresarial</small>
+            <strong>NIT 1057582739-9</strong>
+            <p>Representante: Wilder Esneider Mora Arias</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="principios">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Nuestros principios</p>
+
+          <h2>Compromisos que orientan nuestra actividad empresarial.</h2>
+
+          <p>
+            Nuestro portafolio se desarrolla bajo principios de claridad,
+            responsabilidad comercial y atención respetuosa al cliente.
+          </p>
+        </div>
+
+        <div class="principles-grid">
+          <article class="principle">
+            <span class="principle-number">01</span>
+            <span class="principle-icon" aria-hidden="true">✓</span>
+            <h3>Calidad garantizada</h3>
+            <p>
+              Seleccionamos cuidadosamente las alternativas que forman parte de
+              nuestro portafolio empresarial, buscando utilidad y una adecuada
+              relación precio-valor.
+            </p>
+          </article>
+
+          <article class="principle">
+            <span class="principle-number">02</span>
+            <span class="principle-icon" aria-hidden="true">◎</span>
+            <h3>Transparencia</h3>
+            <p>
+              Publicamos nuestra identidad, canales de contacto, condiciones
+              comerciales y políticas para que la información pueda consultarse
+              antes de cualquier decisión.
+            </p>
+          </article>
+
+          <article class="principle">
+            <span class="principle-number">03</span>
+            <span class="principle-icon" aria-hidden="true">★</span>
+            <h3>Satisfacción del cliente</h3>
+            <p>
+              Procuramos brindar orientación clara, atención cercana y canales
+              disponibles para resolver consultas relacionadas con nuestra
+              actividad comercial.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="information-section" id="empresa">
+      <div class="information-grid container">
+        <div>
+          <p class="eyebrow">Información empresarial</p>
+          <h2>Datos oficiales de Renova Colombia.</h2>
+
+          <p class="intro">
+            Esta información se publica para clientes, plataformas digitales,
+            proveedores, aliados y autoridades competentes.
+          </p>
+        </div>
+
+        <dl class="company-data-list">
+          <div>
+            <dt>Nombre comercial</dt>
+            <dd>Renova Colombia</dd>
+          </div>
+
+          <div>
+            <dt>NIT</dt>
+            <dd>1057582739-9</dd>
+          </div>
+
+          <div>
+            <dt>Representante</dt>
+            <dd>Wilder Esneider Mora Arias</dd>
+          </div>
+
+          <div>
+            <dt>Dirección</dt>
+            <dd>CL 20 11 A 74, Sogamoso, Boyacá</dd>
+          </div>
+
+          <div>
+            <dt>Correo oficial</dt>
+            <dd>
+              <a href="mailto:contacto@renovacolombia.com">
+                contacto@renovacolombia.com
+              </a>
+            </dd>
+          </div>
+
+          <div>
+            <dt>Teléfono y WhatsApp</dt>
+            <dd>
+              <a href="tel:+573202891890">+57 320 289 1890</a>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="policies" id="politicas">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Políticas oficiales</p>
+          <h2>Información legal y comercial accesible.</h2>
+
+          <p>
+            Los siguientes textos pueden ser consultados directamente por
+            clientes, plataformas publicitarias y motores de búsqueda.
+          </p>
+        </div>
+
+        <div class="policy-list">
+          <details class="policy-item" id="terminos">
+            <summary>
+              Términos y condiciones
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <div class="policy-content">
+              <p>
+                El acceso y uso de este sitio implica la aceptación de los
+                presentes términos y condiciones. En todo el sitio, las
+                expresiones “nosotros”, “nuestro” y “la empresa” se refieren a
+                Renova Colombia.
+              </p>
+
+              <h3>Información del portafolio</h3>
+              <p>
+                La información publicada tiene carácter empresarial e
+                informativo. Las características, disponibilidad, precios y
+                condiciones particulares podrán confirmarse a través de los
+                canales oficiales.
+              </p>
+
+              <h3>Responsabilidad del usuario</h3>
+              <p>
+                El usuario se compromete a suministrar información verdadera,
+                completa y actualizada cuando realice una consulta o solicitud.
+              </p>
+
+              <h3>Ley aplicable</h3>
+              <p>
+                Estos términos se interpretan conforme a las leyes de la
+                República de Colombia.
+              </p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="retracto">
+            <summary>
+              Derecho de retracto — Ley 1480
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <div class="policy-content">
+              <p>
+                Cuando resulte legalmente aplicable, el consumidor podrá ejercer
+                el derecho de retracto dentro de los cinco (5) días hábiles
+                siguientes a la entrega del producto, de conformidad con el
+                artículo 47 de la Ley 1480 de 2011.
+              </p>
+
+              <p>
+                El producto deberá devolverse por los mismos medios y en las
+                mismas condiciones en que fue recibido. Los costos de transporte
+                asociados al retracto serán asumidos por el consumidor, salvo
+                disposición legal diferente.
+              </p>
+
+              <p>
+                Para presentar una solicitud, escriba a
+                contacto@renovacolombia.com indicando el nombre del titular,
+                número de pedido, datos de contacto y motivo de la solicitud.
+              </p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="privacidad">
+            <summary>
+              Política de privacidad
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <div class="policy-content">
+              <p>
+                Renova Colombia protege la información personal suministrada por
+                usuarios y clientes. Los datos podrán utilizarse para responder
+                consultas, gestionar solicitudes, confirmar información,
+                procesar pedidos cuando corresponda y cumplir obligaciones
+                legales.
+              </p>
+
+              <h3>Información recopilada</h3>
+              <ul>
+                <li>Nombre y datos de identificación.</li>
+                <li>Teléfono, correo electrónico y dirección.</li>
+                <li>Información necesaria para atender una solicitud.</li>
+              </ul>
+
+              <h3>Derechos del titular</h3>
+              <p>
+                El titular podrá solicitar la consulta, actualización,
+                corrección o eliminación de sus datos mediante el correo
+                contacto@renovacolombia.com, cuando legalmente proceda.
+              </p>
+
+              <p>
+                Renova Colombia no venderá ni distribuirá información personal
+                sin autorización, salvo obligación legal o requerimiento de una
+                autoridad competente.
+              </p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="cambios">
+            <summary>
+              Cambios y devoluciones
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <div class="policy-content">
+              <p>
+                Las solicitudes de cambio deberán presentarse por medio del
+                correo contacto@renovacolombia.com o del WhatsApp oficial
+                +57 320 289 1890, incluyendo los datos del titular y la
+                información relacionada con la solicitud.
+              </p>
+
+              <p>
+                El artículo deberá conservarse sin uso, limpio, sin
+                modificaciones y con sus etiquetas, accesorios y empaque
+                originales, cuando corresponda.
+              </p>
+
+              <p>
+                Si se confirma que el producto entregado no corresponde al
+                solicitado o existe un error atribuible a Renova Colombia, se
+                informará el procedimiento aplicable.
+              </p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="envios">
+            <summary>
+              Política de envíos
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <div class="policy-content">
+              <p>
+                La cobertura, el costo y el tiempo estimado de entrega se
+                informarán o confirmarán mediante los canales oficiales antes
+                del despacho cuando corresponda.
+              </p>
+
+              <p>
+                Los tiempos de transporte son estimados y pueden variar según
+                la ciudad de destino, disponibilidad, operador logístico, días
+                hábiles, condiciones de acceso o situaciones de fuerza mayor.
+              </p>
+
+              <p>
+                El envío gratuito aplicará únicamente cuando se indique
+                expresamente dentro de una oferta o condición comercial.
+              </p>
+            </div>
+          </details>
+
+          <details class="policy-item" id="contacto">
+            <summary>
+              Contacto empresarial
+              <span aria-hidden="true">+</span>
+            </summary>
+
+            <div class="policy-content">
+              <p><strong>Empresa:</strong> Renova Colombia</p>
+              <p><strong>NIT:</strong> 1057582739-9</p>
+              <p><strong>Representante:</strong> Wilder Esneider Mora Arias</p>
+              <p><strong>Dirección:</strong> CL 20 11 A 74, Sogamoso, Boyacá</p>
+              <p>
+                <strong>Correo:</strong>
+                <a href="mailto:contacto@renovacolombia.com">
+                  contacto@renovacolombia.com
+                </a>
+              </p>
+              <p>
+                <strong>Teléfono:</strong>
+                <a href="tel:+573202891890">+57 320 289 1890</a>
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid container">
+      <div>
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">R</span>
+
+          <span class="brand-text">
+            <strong>RENOVA</strong>
+            <small>COLOMBIA</small>
+          </span>
+        </div>
+
+        <p class="footer-description">
+          Portafolio empresarial colombiano basado en calidad, transparencia y
+          atención cercana.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Información oficial</h3>
+        <span>NIT 1057582739-9</span>
+        <span>Wilder Esneider Mora Arias</span>
+        <span>CL 20 11 A 74</span>
+        <span>Sogamoso, Boyacá</span>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contacto</h3>
+
+        <a href="mailto:contacto@renovacolombia.com">
+          contacto@renovacolombia.com
+        </a>
+
+        <a href="tel:+573202891890">
+          +57 320 289 1890
+        </a>
+
+        <a
+          href="https://wa.me/573202891890?text=Hola%20Renova%20Colombia%2C%20deseo%20realizar%20una%20consulta%20empresarial."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp empresarial
+        </a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Políticas</h3>
+        <a href="#terminos">Términos y condiciones</a>
+        <a href="#retracto">Derecho de retracto</a>
+        <a href="#privacidad">Política de privacidad</a>
+        <a href="#cambios">Cambios y devoluciones</a>
+        <a href="#envios">Política de envíos</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <span>© 2026 Renova Colombia. Todos los derechos reservados.</span>
+      <span>Sitio oficial de información empresarial.</span>
+    </div>
+  </footer>
+
+  <a
+    class="whatsapp-floating"
+    href="https://wa.me/573202891890?text=Hola%20Renova%20Colombia%2C%20deseo%20realizar%20una%20consulta%20corporativa."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Realizar una consulta corporativa por WhatsApp"
+  >
+    <span class="whatsapp-icon" aria-hidden="true">
+      <svg viewBox="0 0 32 32">
+        <path d="M19.11 17.56c-.37-.19-2.18-1.07-2.52-1.2-.34-.12-.59-.19-.83.19-.25.37-.96 1.2-1.18 1.45-.22.25-.43.28-.8.09-.37-.19-1.56-.57-2.97-1.83-1.1-.98-1.84-2.19-2.06-2.56-.22-.37-.02-.57.16-.75.17-.17.37-.43.56-.65.19-.22.25-.37.37-.62.12-.25.06-.47-.03-.65-.09-.19-.83-2.01-1.14-2.75-.3-.72-.61-.62-.83-.63h-.71c-.25 0-.65.09-.99.47-.34.37-1.3 1.27-1.3 3.09 0 1.82 1.33 3.58 1.51 3.83.19.25 2.61 3.99 6.33 5.59.88.38 1.57.61 2.11.78.89.28 1.69.24 2.33.15.71-.11 2.18-.89 2.49-1.76.31-.87.31-1.61.22-1.76-.09-.16-.34-.25-.71-.44zM16.03 3.2c-7.04 0-12.76 5.7-12.76 12.73 0 2.24.59 4.43 1.7 6.36L3.16 28.8l6.67-1.75a12.72 12.72 0 0 0 6.19 1.58h.01c7.04 0 12.77-5.71 12.77-12.73 0-3.4-1.33-6.59-3.74-8.99A12.68 12.68 0 0 0 16.03 3.2zm0 23.28h-.01a10.57 10.57 0 0 1-5.39-1.47l-.39-.23-3.96 1.04 1.06-3.86-.25-.4a10.54 10.54 0 0 1-1.62-5.63c0-5.82 4.74-10.56 10.57-10.56 2.82 0 5.48 1.1 7.47 3.09 2 1.99 3.1 4.64 3.1 7.46-.01 5.83-4.75 10.56-10.58 10.56z"/>
+      </svg>
+    </span>
+
+    Consulta empresarial
+  </a>
+
+  <script>
+    function toggleMenu(button) {
+      const menu = document.getElementById("mobile-menu");
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+
+      button.setAttribute("aria-expanded", String(!isOpen));
+      button.textContent = isOpen ? "☰" : "×";
+      menu.hidden = isOpen;
+    }
+
+    function closeMenu() {
+      const menu = document.getElementById("mobile-menu");
+      const button = document.querySelector(".menu-button");
+
+      menu.hidden = true;
+      button.setAttribute("aria-expanded", "false");
+      button.textContent = "☰";
+    }
+  </script>
+</body>
+</html>
