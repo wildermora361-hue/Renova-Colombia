@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renova Colombia | Portafolio Empresarial</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #0284c7;
+            --dark: #1f2937;
+            --light: #f9fafb;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light); color: var(--dark); line-height: 1.6; }
+        header { background: white; padding: 1rem 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .logo { font-weight: bold; font-size: 1.5rem; color: var(--primary); text-decoration: none; }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: var(--dark); font-weight: 500; }
+        nav a:hover { color: var(--secondary); }
+        .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 5rem 2rem; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem; }
+        .container { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .card { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 4px solid var(--secondary); }
+        .card h3 { margin-bottom: 1rem; color: var(--primary); }
+        .legal-section { background: white; padding: 3rem 2rem; border-radius: 8px; margin-top: 3rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .legal-section h2 { color: var(--primary); margin-bottom: 1.5rem; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+        .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+        .legal-box { background: var(--light); padding: 1rem; border-radius: 6px; text-decoration: none; color: var(--dark); text-align: center; font-weight: 500; border: 1px solid #e5e7eb; }
+        .legal-box:hover { background: #e0f2fe; border-color: var(--secondary); }
+        footer { background: var(--dark); color: #cbd5e1; padding: 3rem 2rem; margin-top: 5rem; font-size: 0.9rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem; }
+        .footer-info h4 { color: white; margin-bottom: 1rem; }
+        .footer-info p { margin-bottom: 0.5rem; }
+        .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background: #25d366; color: white; padding: 0.8rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); display: flex; align-items: center; gap: 0.5rem; z-index: 1000; }
+        .whatsapp-btn:hover { background: #128c7e; transform: scale(1.05); transition: 0.2s; }
+        @media (max-width: 768px) { .nav-container { flex-direction: column; gap: 1rem; } nav a { margin: 0 0.7rem; } .hero h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">RENOVA COLOMBIA</a>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#principios">Principios</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#politicas">Políticas Legales</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>Portafolio Empresarial Oficial</h1>
+        <p>Garantizamos soluciones corporativas con la mejor relación precio-valor. Un destino diseñado bajo estándares de calidad, estilo y conveniencia internacional.</p>
+    </section>
+
+    <div class="container">
+        <section id="principios">
+            <h2 style="text-align: center; color: var(--primary);">Nuestros Principios Corporativos</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Calidad Garantizada</h3>
+                    <p>Cada solución y producto de nuestro catálogo pasa por estrictos controles de optimización y verificación de origen.</p>
+                </div>
+                <div class="card">
+                    <h3>Transparencia Comercial</h3>
+                    <p>Operamos con honestidad absoluta, brindando la documentación comercial necesaria para respaldar cada transacción.</p>
+                </div>
+                <div class="card">
+                    <h3>Satisfacción Verificada</h3>
+                    <p>Compromiso real con la experiencia de nuestros aliados y clientes, manteniendo canales de atención siempre abiertos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="legal-section" id="politicas">
+            <h2>Marco Legal Corporativo (Meta Ads Compliant)</h2>
+            <p style="margin-bottom: 1.5rem;">Documentación obligatoria en cumplimiento con la Ley 1480 de 2011 (Estatuto del Consumidor de Colombia):</p>
+            <div class="legal-grid">
+                <div class="legal-box">Derecho de Retracto</div>
+                <div class="legal-box">Políticas de Privacidad</div>
+                <div class="legal-box">Términos y Condiciones</div>
+                <div class="legal-box">Cambios y Devoluciones</div>
+                <div class="legal-box">Políticas de Envío</div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h4>Renova Colombia</h4>
+                <p><strong>Representante Legal:</strong> MORA ARIAS WILDER ESNEIDER</p>
+                <p><strong>NIT:</strong> 1057582739-9</p>
+                <p><strong>Dirección:</strong> CL 20 11 A 74, Sogamoso, Boyacá (CP 152211)</p>
+            </div>
+            <div class="footer-info" id="contacto">
+                <h4>Canales Corporativos</h4>
+                <p><strong>Correo:</strong> contacto@renovacolombia.com</p>
+                <p><strong>Horario de atención:</strong> Canales abiertos 24/7</p>
+                <p>© Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me" class="whatsapp-btn" target="_blank">
+        💬 WhatsApp Corporativo
+    </a>
+
+</body>
+</html>
